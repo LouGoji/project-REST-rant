@@ -16,7 +16,18 @@ function index (data) {
       </div>
     )
   })
-  
+  return (
+    <Def>
+        <main>
+            <h1>Places to Rant or Rave About</h1>
+            <div className="row">
+              {placesFormatted}
+            </div>
+        </main>
+    </Def>
+  )
+}
+
   
   
 
