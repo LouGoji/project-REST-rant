@@ -4,7 +4,7 @@ const Def = require('../default.jsx')
 function edit_form (data) {
     return (
         <Def>
-         <form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
+<form method="POST" action={`/places/${data.place.id}?_method=PUT`}>
   <div className="form-group">
       <label htmlFor="name">Place Name</label>
       <input 
@@ -14,8 +14,45 @@ function edit_form (data) {
         value={data.place.name} 
       required />
   </div>
-  ...
+  <div className="form-group">
+      <label htmlFor="pic">Place Picture</label>
+      <input 
+        className="form-control" 
+        id="pic" 
+        name="pic" 
+        value={data.place.pic} 
+      required />
+  </div>
+  <div className="form-group">
+      <label htmlFor="city">City</label>
+      <input 
+        className="form-control" 
+        id="city" 
+        name="city" 
+        value={data.place.city} 
+      required />
+  </div>
+  <div className="form-group">
+      <label htmlFor="state">State</label>
+      <input 
+        className="form-control" 
+        id="state" 
+        name="state" 
+        value={data.place.state} 
+      required />
+  </div>
+  <div className="form-group">
+      <label htmlFor="cuisines">Cuisines</label>
+      <input 
+        className="form-control" 
+        id="cuisines" 
+        name="cuisines" 
+        value={data.place.cuisines} 
+      required />
+  </div>
+  <input className="btn btn-primary" type="submit" value="Add Place" />
 </form>
+
 
         </Def>
     )
