@@ -2,9 +2,19 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+  let message = ''
+  if (data.massage) {
+    message = (
+      <h4 className="alert-danger">
+        {data.message}
+      </h4>
+    )
+  }
     return (
         <Def>
           <main>
+            <h1> Add a New Place</h1>
+            {message}
             <div className="row">
               <div className="col-sm-6">
                 <img src={data.place.pic} alt={data.place.name} />
