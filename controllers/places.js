@@ -56,19 +56,19 @@ router.post('/', (req, res) => {
 
 
 router.delete('/:id', (req, res) => {
-  res.render('DELETE/places/:id stub')
+  res.send('DELETE/places/:id stub')
 })
 
 router.get('/:id/edit', (req, res) => {
-  res.render('GET edit form stub')
+  res.send('GET edit form stub')
 })
 
 router.post('/:id/rant', (req, res) => {
-  res.render('GET /places/:id/rant stub')
+  res.send('GET /places/:id/rant stub')
 })
 
 router.delete('/:id/rant/:rantId', (req, res) => {
-  res.render('GET/places/:id/rant/:rantId stub')
+  res.send('GET/places/:id/rant/:rantId stub')
 })
 
 module.exports = router
